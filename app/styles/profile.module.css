@@ -1,0 +1,101 @@
+/* /styles/profile.module.css */
+
+.profileContainer {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px; /* 상단 여백 추가 */
+}
+
+.profileHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profileHeader img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profileInfo {
+    flex: 1;
+}
+
+.followersStats {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.highlightsContainer {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.highlight {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.highlight img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.highlightOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.activeHighlight {
+    transform: scale(1.1);
+}
+
+.postsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px; /* 게시물 위쪽 여백 추가 */
+}
+
+.post {
+    width: calc(33.333% - 10px); /* 3열 격자 */
+    position: relative;
+    margin-bottom: 10px; /* 하단 여백 추가 */
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.postOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

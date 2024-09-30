@@ -1,0 +1,177 @@
+.header {
+     width: 100%;
+     height: 60px; /* 높이 조정 */
+     padding: 10px 20px;
+     border-bottom: 3px solid rgba(226, 226, 226, 0.247);
+     display: flex;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     background-color: #111;
+     z-index: 1000;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+     overflow: visible; /* 자식 요소가 헤더 영역을 넘어서도 보이도록 설정 */
+ }
+ 
+ .headerLeft {
+     flex: 1;
+     display: flex;
+     justify-content: flex-start;
+     position: relative;
+ }
+ 
+ .headerCenter {
+     flex: 1;
+     text-align: center;
+ }
+ 
+ .headerRight {
+     flex: 1;
+     display: flex;
+     justify-content: flex-end;
+ }
+ 
+ .menuBtn {
+     margin-right: 10px;
+     border-radius: 50%;
+     padding: 10px;
+     background-color: #333;
+     color: #e2e2e2;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     font-size: 1.2rem; /* 폰트 사이즈 조정 */
+     line-height: 1;
+ }
+ 
+ .menuBtn:hover {
+     background-color: #555;
+ }
+ 
+ .dropdownMenu {
+     display: show; /* 기본적으로 숨기기 */
+     position: absolute;
+     top: 100%; /* 메뉴 버튼 아래로 위치 조정 */
+     left: 0;
+     background-color: #333;
+     border: 1px solid #555;
+     border-radius: 5px;
+     overflow: hidden;
+     z-index: 1001; /* 드롭다운 메뉴가 헤더보다 위에 있도록 설정 */
+     width: 200px; /* 드롭다운 메뉴 너비 조정 */
+ }
+ 
+ .dropdownMenu.show {
+     display: block; /* 드롭다운이 보이도록 설정 */
+ }
+ 
+ .dropdownBtn {
+     border-radius: 0;
+     width: 100%;
+     padding: 10px;
+     background-color: #444;
+     color: #e2e2e2;
+     border-bottom: 1px solid #555;
+     text-align: left; /* 버튼 내용 정렬 */
+     font-size: 0.9rem; /* 버튼 폰트 사이즈 조정 */
+ }
+ 
+ .dropdownBtn:hover {
+     background-color: #666;
+ }
+ 
+ .dropdownBtn:last-child {
+     border-bottom: none;
+ }
+ 
+ .searchBtn, .profileBtn {
+     margin-left: 10px;
+     border-radius: 5px; /* 버튼에 둥근 모서리 추가 */
+     padding: 10px;
+     background-color: #333;
+     color: #e2e2e2;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     font-size: 0.9rem; /* 버튼 폰트 사이즈 조정 */
+ }
+ 
+ .searchBtn:hover, .profileBtn:hover {
+     background-color: #555;
+ }
+ 
+ .logo {
+     font-size: 1.5rem; /* 로고 폰트 사이즈 조정 */
+     color: #e2e2e2;
+     font-weight: bold;
+     cursor: pointer; /* 클릭 가능한 모양으로 변경 */
+ }
+ 
+ .main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 80vh;
+     padding-top: 70px; /* 헤더 높이 및 여백 조정 */
+ }
+ 
+ .formWrapper {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     background-color: #111;
+     padding: 40px;
+     border-radius: 10px;
+     border: 1px solid #555;
+     width: 90%;
+     max-width: 800px; /* 전체 넓이를 최대 800px로 제한 */
+ }
+ 
+ .formContainer {
+     width: 48%; /* 양쪽 폼이 가운데로 몰리게 하기 위해 넓이 조정 */
+ }
+ 
+ .formContainer h2 {
+     margin-top: 0;
+     margin-bottom: 20px;
+     text-align: center;
+ }
+ 
+ .formContainer input[type="text"], 
+ .formContainer input[type="password"], 
+ .formContainer input[type="email"] {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 15px;
+     border-radius: 5px;
+     border: 1px solid #555;
+     background-color: #222;
+     color: #e2e2e2;
+     box-sizing: border-box; /* padding 포함해 전체 넓이를 조정 */
+ }
+ 
+ .formContainer button[type="submit"] {
+     width: 100%;
+     padding: 10px;
+     background-color: #333;
+     color: #e2e2e2;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+ 
+ .formContainer button[type="submit"]:hover {
+     background-color: #555;
+ }
+ 
+ .footer {
+     width: 100%;
+     text-align: center;
+     padding: 20px 0;
+     background-color: #111;
+     position: fixed;
+     bottom: 0;
+     border-top: 3px solid rgba(226, 226, 226, 0.247);
+ }
+ 
